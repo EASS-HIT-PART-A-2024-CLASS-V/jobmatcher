@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "email": "johnsmith@example.com",
+        "first_name": "John",
+        "last_name": "Smith",
+        "field": "Software",
+        "experience_years": 5,
+        "technical_skills": [
+            {"name": "Debugging", "field": "Software"},
+            {"name": "Node.js", "field": "Software"}
+        ]
+    },
+    {
+        "id": 2,
+        "email": "janedoe@example.com",
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "field": "Marketing",
+        "experience_years": 3,
+        "technical_skills": [
+            {"name": "SEO", "field": "Marketing"},
+            {"name": "Content Creation", "field": "Marketing"}
+        ]
+    },
+    {
+        "id": 3,
+        "email": "alicebrown@example.com",
+        "first_name": "Alice",
+        "last_name": "Brown",
+        "field": "Tourism",
+        "experience_years": 2,
+        "technical_skills": [
+            {"name": "Travel Planning", "field": "Tourism"},
+            {"name": "Customer Service", "field": "Tourism"}
+        ]
+    },
+    {
+        "id": 4,
+        "email": "mikeross@example.com",
+        "first_name": "Mike",
+        "last_name": "Ross",
+        "field": "Software",
+        "experience_years": 7,
+        "technical_skills": [
+            {"name": "React", "field": "Software"},
+            {"name": "Database Management", "field": "Software"}
+        ]
+    },
+    {
+        "id": 5,
+        "email": "emilywhite@example.com",
+        "first_name": "Emily",
+        "last_name": "White",
+        "field": "Marketing",
+        "experience_years": 4,
+        "technical_skills": [
+            {"name": "Social Media Management", "field": "Marketing"},
+            {"name": "Email Marketing", "field": "Marketing"}
+        ]
+    },
+    {
+        "id": 6,
+        "email": "johndavis@example.com",
+        "first_name": "John",
+        "last_name": "Davis",
+        "field": "Tourism",
+        "experience_years": 1,
+        "technical_skills": [
+            {"name": "Tour Guiding", "field": "Tourism"},
+            {"name": "Itinerary Design", "field": "Tourism"}
+        ]
+    },
+    {
+        "id": 7,
+        "email": "sarahwilson@example.com",
+        "first_name": "Sarah",
+        "last_name": "Wilson",
+        "field": "Software",
+        "experience_years": 6,
+        "technical_skills": [
+            {"name": "Debugging", "field": "Software"},
+            {"name": "Python", "field": "Software"}
+        ]
+    },
+    {
+        "id": 8,
+        "email": "adamthompson@example.com",
+        "first_name": "Adam",
+        "last_name": "Thompson",
+        "field": "Tourism",
+        "experience_years": 3,
+        "technical_skills": [
+            {"name": "Customer Service", "field": "Tourism"},
+            {"name": "Booking Management", "field": "Tourism"}
+        ]
+    },
+    {
+        "id": 9,
+        "email": "jenniferbrown@example.com",
+        "first_name": "Jennifer",
+        "last_name": "Brown",
+        "field": "Marketing",
+        "experience_years": 5,
+        "technical_skills": [
+            {"name": "Content Creation", "field": "Marketing"},
+            {"name": "PPC Campaigns", "field": "Marketing"}
+        ]
+    },
+    {
+        "id": 10,
+        "email": "alexanderclark@example.com",
+        "first_name": "Alexander",
+        "last_name": "Clark",
+        "field": "Software",
+        "experience_years": 8,
+        "technical_skills": [
+            {"name": "Software Design", "field": "Software"},
+            {"name": "Node.js", "field": "Software"}
+        ]
+    }
+]
