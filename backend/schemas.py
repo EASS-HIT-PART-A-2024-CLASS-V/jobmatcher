@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, conint
 from enum import Enum
 from typing import List, Optional
 
@@ -20,7 +20,7 @@ class Remote(Enum):
     hybrid = 'Hybrid'
 
 class Skill(Enum):
-    class Skill(Enum):
+    
     # Marketing Skills
     seo = {'name': 'SEO', 'field': Field.marketing}
     content_creation = {'name': 'Content Creation', 'field': Field.marketing}
@@ -47,7 +47,7 @@ class Skill(Enum):
 class Job(BaseModel):
     id: int
     title: str
-    field: FieldEnum
+    field: Field
     description: str
     company_id: int
     location: str
@@ -68,7 +68,7 @@ class Company(User):
 class Candidate(User):
     first_name: str
     last_name: str
-    field: FieldEnum
+    field: Field
     experience_years: conint(ge=0, le=50)
     technical_skills: List[Skill]
 
