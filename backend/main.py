@@ -22,7 +22,7 @@ async def jobs_match(user_id:int):
     
     return {'jobs': jobs}
 
-@app.get('/v1/candidates_match/{job_id}') #needs job_id and employee_id
+@app.get('/v1/candidates_match/{job_id}')
 async def candidates_match(job_id: int):
     job = find_job_by_id(job_id)
     candidates = matching_candidates(job)
