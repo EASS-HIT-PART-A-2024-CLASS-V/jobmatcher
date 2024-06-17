@@ -19,7 +19,7 @@ class Remote(Enum):
     remote = 'Remote'
     hybrid = 'Hybrid'
 
-class Skill(Enum):
+class Skill(Enum): #not very maintainable, maybe use builder pattern?
     
     # Marketing Skills
     seo = {'name': 'SEO', 'field': Field.marketing}
@@ -50,8 +50,8 @@ class MatchEntity(BaseModel):
     technical_skills: List[Skill]
     experience_years: conint(ge=0, le=50)
     #likes = Dict[int, bool] #{some id: True==like False==dislike}
-    likes = List[int]
-    dislikes = List[int]
+    likes : List[int]
+    dislikes : List[int]
 
 class Job(MatchEntity):
     title: str

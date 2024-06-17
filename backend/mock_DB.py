@@ -7,7 +7,9 @@ candidates = [
         last_name="Smith",
         field=Field.software,
         experience_years=3,
-        technical_skills=[Skill.node_js, Skill.react, Skill.python]
+        technical_skills=[Skill.node_js, Skill.react, Skill.python],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=2,
@@ -16,7 +18,9 @@ candidates = [
         last_name="Johnson",
         field=Field.marketing,
         experience_years=2,
-        technical_skills=[Skill.seo, Skill.email_marketing, Skill.ppc_campaigns]
+        technical_skills=[Skill.seo, Skill.email_marketing, Skill.ppc_campaigns],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=3,
@@ -25,7 +29,9 @@ candidates = [
         last_name="Williams",
         field=Field.software,
         experience_years=4,
-        technical_skills=[Skill.node_js, Skill.react, Skill.python]
+        technical_skills=[Skill.node_js, Skill.react, Skill.python],
+        likes = [3],
+        dislikes = [],
     ),
     Candidate(
         id=4,
@@ -34,7 +40,9 @@ candidates = [
         last_name="Jones",
         field=Field.tourism,
         experience_years=5,
-        technical_skills=[Skill.travel_planning, Skill.tour_guiding, Skill.customer_service]
+        technical_skills=[Skill.travel_planning, Skill.tour_guiding, Skill.customer_service],
+        likes = [4],
+        dislikes = [],
     ),
     Candidate(
         id=5,
@@ -43,7 +51,9 @@ candidates = [
         last_name="Brown",
         field=Field.software,
         experience_years=2,
-        technical_skills=[Skill.react, Skill.python, Skill.database_management]
+        technical_skills=[Skill.react, Skill.python, Skill.database_management],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=6,
@@ -52,7 +62,9 @@ candidates = [
         last_name="Davis",
         field=Field.marketing,
         experience_years=3,
-        technical_skills=[Skill.social_media_management, Skill.email_marketing, Skill.seo]
+        technical_skills=[Skill.social_media_management, Skill.email_marketing, Skill.seo],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=7,
@@ -61,7 +73,9 @@ candidates = [
         last_name="Miller",
         field=Field.tourism,
         experience_years=4,
-        technical_skills=[Skill.tour_guiding, Skill.itinerary_design, Skill.booking_management]
+        technical_skills=[Skill.tour_guiding, Skill.itinerary_design, Skill.booking_management],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=8,
@@ -70,7 +84,9 @@ candidates = [
         last_name="Wilson",
         field=Field.software,
         experience_years=2,
-        technical_skills=[Skill.node_js, Skill.python, Skill.react]
+        technical_skills=[Skill.node_js, Skill.python, Skill.react],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=9,
@@ -79,7 +95,9 @@ candidates = [
         last_name="Thompson",
         field=Field.software,
         experience_years=3,
-        technical_skills=[Skill.react, Skill.python, Skill.database_management]
+        technical_skills=[Skill.react, Skill.python, Skill.database_management],
+        likes = [],
+        dislikes = [],
     ),
     Candidate(
         id=10,
@@ -88,7 +106,9 @@ candidates = [
         last_name="Roberts",
         field=Field.marketing,
         experience_years=2,
-        technical_skills=[Skill.seo, Skill.social_media_management, Skill.email_marketing]
+        technical_skills=[Skill.seo, Skill.social_media_management, Skill.email_marketing],
+        likes = [],
+        dislikes = [],
     )
 ]
 
@@ -104,7 +124,9 @@ jobs = [
         technical_skills=[Skill.node_js, Skill.react, Skill.python],
         experience_years=3,
         job_type=JobType.full_time,
-        remote=Remote.hybrid
+        remote=Remote.hybrid,
+        likes = [1],
+        dislikes = [],
     ),
     Job(
         id=2,
@@ -117,7 +139,9 @@ jobs = [
         technical_skills=[Skill.seo, Skill.content_creation, Skill.email_marketing],
         experience_years=2,
         job_type=JobType.full_time,
-        remote=Remote.remote
+        remote=Remote.remote,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=3,
@@ -130,7 +154,9 @@ jobs = [
         technical_skills=[Skill.travel_planning, Skill.customer_service, Skill.booking_management],
         experience_years=4,
         job_type=JobType.full_time,
-        remote=Remote.on_site
+        remote=Remote.on_site,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=4,
@@ -143,7 +169,9 @@ jobs = [
         technical_skills=[Skill.node_js, Skill.react, Skill.database_management],
         experience_years=5,
         job_type=JobType.full_time,
-        remote=Remote.hybrid
+        remote=Remote.hybrid,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=5,
@@ -156,7 +184,9 @@ jobs = [
         technical_skills=[Skill.seo, Skill.content_creation, Skill.ppc_campaigns],
         experience_years=3,
         job_type=JobType.full_time,
-        remote=Remote.remote
+        remote=Remote.remote,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=6,
@@ -169,7 +199,9 @@ jobs = [
         technical_skills=[Skill.tour_guiding, Skill.customer_service, Skill.itinerary_design],
         experience_years=6,
         job_type=JobType.part_time,
-        remote=Remote.on_site
+        remote=Remote.on_site,
+        likes = [],
+        dislikes = [6],
     ),
     Job(
         id=7,
@@ -182,7 +214,9 @@ jobs = [
         technical_skills=[Skill.node_js, Skill.python, Skill.database_management],
         experience_years=4,
         job_type=JobType.full_time,
-        remote=Remote.hybrid
+        remote=Remote.hybrid,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=8,
@@ -195,7 +229,9 @@ jobs = [
         technical_skills=[Skill.email_marketing, Skill.content_creation, Skill.social_media_management],
         experience_years=3,
         job_type=JobType.full_time,
-        remote=Remote.remote
+        remote=Remote.remote,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=9,
@@ -208,7 +244,9 @@ jobs = [
         technical_skills=[Skill.customer_service, Skill.booking_management, Skill.itinerary_design],
         experience_years=5,
         job_type=JobType.full_time,
-        remote=Remote.on_site
+        remote=Remote.on_site,
+        likes = [],
+        dislikes = [],
     ),
     Job(
         id=10,
@@ -221,6 +259,8 @@ jobs = [
         technical_skills=[Skill.react, Skill.node_js, Skill.debugging],
         experience_years=3,
         job_type=JobType.full_time,
-        remote=Remote.hybrid
+        remote=Remote.hybrid,
+        likes = [],
+        dislikes = [],
     )
 ]
