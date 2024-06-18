@@ -3,10 +3,13 @@ from enum import Enum
 from typing import List, Optional, Dict
 
 
-class Field(Enum):
-    marketing = 'Marketing'
+class Field(BaseModel):
+    id: int
+    title: str
+
+    '''marketing = 'Marketing'
     tourism = 'Tourism'
-    software = 'Software'
+    software = 'Software'''
 
 class JobType(Enum):
     full_time = 'Full-Time'
@@ -19,9 +22,11 @@ class Remote(Enum):
     remote = 'Remote'
     hybrid = 'Hybrid'
 
-class Skill(Enum): #not very maintainable, maybe use builder pattern?
-    
-    # Marketing Skills
+class Skill(BaseModel): #not very maintainable, maybe use builder pattern?
+    id: int
+    title: str
+    field_id: int
+    '''# Marketing Skills
     seo = {'name': 'SEO', 'field': Field.marketing}
     content_creation = {'name': 'Content Creation', 'field': Field.marketing}
     social_media_management = {'name': 'Social Media Management', 'field': Field.marketing}
@@ -42,12 +47,12 @@ class Skill(Enum): #not very maintainable, maybe use builder pattern?
     react = {'name': 'React', 'field': Field.software}
     c_cpp = {'name': 'C/C++', 'field': Field.software}
     python = {'name': 'Python', 'field': Field.software}
-    database_management = {'name': 'Database Management', 'field': Field.software}
+    database_management = {'name': 'Database Management', 'field': Field.software}'''
 
 class MatchEntity(BaseModel):
     id: int #maybe later i'll have special ID class or something
-    field: Field
-    technical_skills: List[Skill]
+    field_id: int
+    technical_skills: List[int]
     experience_years: conint(ge=0, le=50)
     #likes = Dict[int, bool] #{some id: True==like False==dislike}
     likes : List[int]

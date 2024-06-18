@@ -56,7 +56,7 @@ def test_swiping_candidates():
 
     #should not match
     job_id = 5 
-    cand_id = 5 #didnt liked job 5
+    cand_id = 5 #didnt like job 5
     response = client.post(f'/v1/swiping_candidates/{job_id}?cand_id={cand_id}&like=true')
     assert response.status_code == 200
     assert response.json()['match'] == False
@@ -68,7 +68,4 @@ def test_swiping_candidates():
     assert response.status_code == 400
     assert response.json()['detail'] == 'This job has swiped this candidate already'
 
-    
-
-#def test_swiping_candidates():
         
