@@ -85,7 +85,7 @@ candidates = [
         field_id=3,
         experience_years=2,
         technical_skills=[13, 16, 14],
-        likes=[],
+        likes=[8],
         dislikes=[],
     ),
     Candidate(
@@ -216,7 +216,7 @@ jobs = [
         experience_years=4,
         job_type=JobType.full_time,
         remote=Remote.hybrid,
-        likes=[],
+        likes=[7],
         dislikes=[],
     ),
     Job(

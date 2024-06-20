@@ -22,7 +22,7 @@ class Remote(Enum):
     remote = 'Remote'
     hybrid = 'Hybrid'
 
-class Skill(BaseModel): #not very maintainable, maybe use builder pattern?
+class Skill(BaseModel): 
     id: int
     title: str
     field_id: int

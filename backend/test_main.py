@@ -43,6 +43,12 @@ def test_swiping_jobs():
     assert response.status_code == 400
     assert response.json()['detail'] == 'This candidate has swiped this job already'
 
+    cand_id = 7 
+    job_id = 7 #liked candidate 7
+    response = client.post(f'/v1/swiping_jobs/{cand_id}?job_id={job_id}&like=false')
+    assert response.status_code == 200
+    assert response.json()['match'] == False
+
 #########################################
 
 def test_swiping_candidates():
@@ -67,5 +73,10 @@ def test_swiping_candidates():
     response = client.post(f'/v1/swiping_candidates/{job_id}?cand_id={cand_id}&like=true')
     assert response.status_code == 400
     assert response.json()['detail'] == 'This job has swiped this candidate already'
-
+    
+    job_id = 8 
+    cand_id = 8  #liked job 8
+    response = client.post(f'/v1/swiping_candidates/{job_id}?cand_id={cand_id}&like=false')
+    assert response.status_code == 200
+    assert response.json()['match'] == False
         
