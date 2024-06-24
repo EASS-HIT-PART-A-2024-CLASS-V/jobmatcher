@@ -35,8 +35,8 @@ The `Job` entity represents a job position offered by a company. Each job has th
 
 ## Instructions to Run Backend Service
 
-1. Clone the Repository
-    Choose one of the following, according to you preference:
+1. Clone the Repository. 
+   Choose one of the following, according to you preference:
 
     HTTPS:
     ```bash
