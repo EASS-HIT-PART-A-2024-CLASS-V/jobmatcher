@@ -29,14 +29,21 @@ async def home():
 @app.get('/v1/jobs_match/{cand_id}')
 async def jobs_match(cand_id:int):
     candidate = find_candidate_by_id(cand_id) #async
-    jobs = matching_jobs(candidate)
-    return {'jobs': jobs}
+    if candidate:
+        jobs = matching_jobs(candidate)
+        return {'jobs': jobs}
+    else:
+        raise HTTPException(status_code=404, detail=f"couldn't find candidate with id: {cand_id}")
 
 @app.get('/v1/candidates_match/{job_id}')
 async def candidates_match(job_id: int):
     job = find_job_by_id(job_id) #async
-    candidates = matching_candidates(job)
-    return {'candidates': candidates}
+    if job:
+        candidates = matching_candidates(job)
+        return {'candidates': candidates}
+    else:
+        raise HTTPException(status_code=404, detail=f"couldn't find job with id: {job_id}")
+
 
 @app.post('/v1/swiping_jobs/{cand_id}')
 async def swiping_jobs(cand_id: int, job_id: int, like: bool):

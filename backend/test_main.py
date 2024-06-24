@@ -15,10 +15,17 @@ def test_jobs_match():
     assert response.status_code == 200
     assert 'jobs' in response.json()     
 
+    response = client.get('/v1/jobs_match/-1')
+    assert response.status_code == 404
+
+
 def test_candidates_match():
     response = client.get('/v1/candidates_match/1')
     assert response.status_code == 200
     assert 'candidates' in response.json()     
+
+    response = client.get('/v1/candidates_match/-1')
+    assert response.status_code == 404
 
 def test_swiping_jobs():
     

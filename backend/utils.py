@@ -15,14 +15,14 @@ def find_job_by_id(job_id: int): #async
     for j in jobs:
         if j.id == job_id:
             return j
-    return f'job {job_id} not found'
+    return False
 
 def find_candidate_by_id(candidate_id: int): #async
     candidates = find_candidates_list()
     for c in candidates:
         if c.id == candidate_id:
             return c
-    return f'candidate {candidate_id} not found'
+    return False
 
 ############
 
