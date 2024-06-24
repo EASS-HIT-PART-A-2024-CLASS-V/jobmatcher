@@ -38,13 +38,13 @@ The `Job` entity represents a job position offered by a company. Each job has th
 1. Clone the Repository
     ```bash
     git clone https://github.com/EASS-HIT-PART-A-2024-CLASS-V/jobmatcher
-    cd jobmatcher-app
+    
     ```
 
 2. Build Backend Service
 
     ```bash
-    cd backend
+    cd jobmatcher/backend
     docker build . -t jobmatcher-backend
     ```
 3. Run The Container
