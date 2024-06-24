@@ -45,7 +45,7 @@ The `Job` entity represents a job position offered by a company. Each job has th
     ```
     SSH:
     ```bash
-    git@github.com:EASS-HIT-PART-A-2024-CLASS-V/jobmatcher.git
+    git clone git@github.com:EASS-HIT-PART-A-2024-CLASS-V/jobmatcher.git
     
     ```
     GitHub CLI:
