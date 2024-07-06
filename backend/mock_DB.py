@@ -306,3 +306,9 @@ skills = [
     Skill(id=16, title='Python', field_id=3),
     Skill(id=17, title='Database Management', field_id=3),
 ]
+
+companies = [
+    Company(id=1, email="contact@company1.com", name="Tech Innovators", job_ids=[1, 2, 3]),
+    Company(id=2, email="hr@company2.com", name="Data Wizards", job_ids=[4, 5, 6]),
+    Company(id=3, email="info@company3.com", name="Product Masters", job_ids=[7, 8, 9, 10])
+]

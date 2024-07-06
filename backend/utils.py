@@ -1,7 +1,10 @@
 from schemas import *
 import json
+from fastapi import HTTPException
 
 #DB operations
+
+##get collections
 def find_jobs_list(): #async
     from mock_DB import jobs
     return jobs
@@ -10,19 +13,34 @@ def find_candidates_list(): #async
     from mock_DB import candidates
     return candidates
 
+def find_companies_list(): #async
+    from mock_DB import companies
+    return companies
+
+##get document
 def find_job_by_id(job_id: int): #async
+    job_id = int(job_id)
     jobs = find_jobs_list()
     for j in jobs:
         if j.id == job_id:
             return j
-    return False
+    raise HTTPException(status_code=404, detail=f"Job id {job_id} not found")
 
 def find_candidate_by_id(candidate_id: int): #async
+    candidate_id = int(candidate_id)
     candidates = find_candidates_list()
     for c in candidates:
         if c.id == candidate_id:
             return c
-    return False
+    raise HTTPException(status_code=404, detail=f"candidate id {candidate_id} not found")
+
+def find_company_by_id(company_id: int): #async
+    company_id = int(company_id)
+    company = find_companies_list()
+    for c in company:
+        if c.id == company_id:
+            return c
+    raise HTTPException(status_code=404, detail=f"company id {company_id} not found")
 
 ############
 

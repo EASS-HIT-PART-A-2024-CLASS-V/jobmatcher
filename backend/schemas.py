@@ -26,28 +26,7 @@ class Skill(BaseModel):
     id: int
     title: str
     field_id: int
-    '''# Marketing Skills
-    seo = {'name': 'SEO', 'field': Field.marketing}
-    content_creation = {'name': 'Content Creation', 'field': Field.marketing}
-    social_media_management = {'name': 'Social Media Management', 'field': Field.marketing}
-    email_marketing = {'name': 'Email Marketing', 'field': Field.marketing}
-    ppc_campaigns = {'name': 'PPC Campaigns', 'field': Field.marketing}
 
-    # Tourism Skills
-    travel_planning = {'name': 'Travel Planning', 'field': Field.tourism}
-    tour_guiding = {'name': 'Tour Guiding', 'field': Field.tourism}
-    customer_service = {'name': 'Customer Service', 'field': Field.tourism}
-    itinerary_design = {'name': 'Itinerary Design', 'field': Field.tourism}
-    booking_management = {'name': 'Booking Management', 'field': Field.tourism}
-
-    # Software Skills
-    debugging = {'name': 'Debugging', 'field': Field.software}
-    software_design = {'name': 'Software Design', 'field': Field.software}
-    node_js = {'name': 'Node.js', 'field': Field.software}
-    react = {'name': 'React', 'field': Field.software}
-    c_cpp = {'name': 'C/C++', 'field': Field.software}
-    python = {'name': 'Python', 'field': Field.software}
-    database_management = {'name': 'Database Management', 'field': Field.software}'''
 
 class MatchEntity(BaseModel):
     id: int #maybe later i'll have special ID class or something
@@ -78,5 +57,5 @@ class User(BaseModel):
 
 class Company(User):
     name: str
-    jobs: List[Job]
+    job_ids: List[int]
 #######################################################

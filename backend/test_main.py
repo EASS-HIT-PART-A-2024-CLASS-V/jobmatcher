@@ -86,4 +86,17 @@ def test_swiping_candidates():
     response = client.post(f'/v1/swiping_candidates/{job_id}?cand_id={cand_id}&like=false')
     assert response.status_code == 200
     assert response.json()['match'] == False
-        
+
+def test_db_routes():
+
+    response = client.get(f'/v1/company/2')
+    assert response.status_code == 200
+    assert 'company' in response.json()
+    company = response.json()['company']
+    assert company['id'] == 2
+
+if __name__ == '__main__':
+    try :
+        test_db_routes()
+    except HTTPException as e:
+        print(e)

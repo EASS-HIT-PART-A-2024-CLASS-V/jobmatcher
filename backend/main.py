@@ -75,3 +75,16 @@ async def swiping_candidates(job_id: int, cand_id: int, like: bool):
         job.dislikes.append(cand_id)
     
     return response
+
+#database routing
+@app.get('/v1/company/{company_id}')
+async def get_company(company_id):
+    company = find_company_by_id(company_id) #async
+    response = {'company': company}
+    return response
+
+@app.get('/v1/jobs/')
+async def get_jobs():
+    jobs = find_jobs_list() #async
+    response = {'jobs': jobs}
+    return response
