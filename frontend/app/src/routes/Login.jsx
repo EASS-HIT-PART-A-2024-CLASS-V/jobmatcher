@@ -7,12 +7,12 @@ export default function Login() {
     //should create api call to candidates_match
     
     const cand_id = 1;
-    const job_id = 2;
+    const companyId = 2;
     return (
         <div className={"login-container"}>
             <h2>Who Are You?</h2>
-            <NavLink to={`/swipe/${job_id}?isCandidate=false`} className={"navlink-button"}>
-                Job
+            <NavLink to={`/companyprofile/${companyId}`} className={"navlink-button"}>
+                Company
             </NavLink>
             <NavLink to={`/swipe/${cand_id}?isCandidate=true`} className={"navlink-button"}>
                 Candidate

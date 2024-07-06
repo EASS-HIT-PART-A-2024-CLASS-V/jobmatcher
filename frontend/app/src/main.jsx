@@ -9,7 +9,8 @@ import Root from "./routes/Root";
 import Login from "./routes/Login";
 import Home from "./routes/Home";
 import Swipe from "./routes/Swipe";
-import { getMatches } from "./apiCalles";
+import { getMatches, getCompany, getJobs } from "./apiCalles";
+import CompanyProfile from "./routes/CompanyProfile";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,16 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login/>,
+      },
+      {
+        path: "companyprofile/:company_id",
+        element: <CompanyProfile/>,
+        loader: async ({params, request}) => {
+          const {company_id} = params
+          const company = await getCompany(company_id)
+          const jobs = await getJobs(company.job_ids)
+          return {company, jobs}
+        }
       },
       {
         path: "swipe/:user_id",

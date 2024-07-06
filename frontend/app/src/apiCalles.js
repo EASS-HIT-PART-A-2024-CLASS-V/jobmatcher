@@ -113,3 +113,34 @@ export const swipe = async (swiperId, matchEntityId, isCandidate, like) => {
     }
     //apiCall to the backend
 }
+
+export const getCompany = async (companyId) => {
+    try {
+        const url_base = "http://127.0.0.1:8000"
+        const url = `${url_base}/v1/company/${companyId}`
+        const response = await axios.get(url)
+        //console.log("#########")
+        //console.log(response)
+        return response.data.company
+    }
+    catch (e) {
+        console.log("#######ERROR########")
+        console.log(e)
+    }
+}
+
+export const getJobs = async (jobIds) => {
+    try {
+        const url_base = "http://127.0.0.1:8000"
+        const url = `${url_base}/v1/jobs/`
+        const response = await axios.get(url)
+        const allJobs = response.data.jobs
+
+        const jobs = allJobs.filter(job => jobIds.includes(job.id))
+
+        return jobs
+    } catch (e) {
+        console.log("#######ERROR########")
+        console.log(e)
+    }
+}
