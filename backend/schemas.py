@@ -33,6 +33,8 @@ class MatchEntity(BaseModel):
     field_id: int
     technical_skills: List[int]
     experience_years: conint(ge=0, le=50)
+    job_type: JobType
+
     #likes = Dict[int, bool] #{some id: True==like False==dislike}
     likes : List[int]
     dislikes : List[int]
@@ -43,7 +45,6 @@ class Job(MatchEntity):
     company_id: int
     location: str
     salary: int
-    job_type: JobType
     remote: Remote
 
 class Candidate(MatchEntity):
