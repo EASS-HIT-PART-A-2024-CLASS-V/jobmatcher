@@ -18,6 +18,18 @@ def test_find_companies_list():
     for c in company:
         assert isinstance(c, Company)
 
+def test_find_skills_list():
+    skills = find_skills_list()
+    for s in skills:
+        assert isinstance(s, Skill)
+
+def test_find_fields_list():
+    fields = find_fields_list()
+    for f in fields:
+        assert isinstance(f, Field)
+
+
+
 def test_find_job_by_id():
     job = find_job_by_id(1)
     assert isinstance(job, Job)
@@ -32,3 +44,9 @@ def test_find_company_by_id():
     company = find_company_by_id(2)
     assert isinstance(company, Company)
     assert company.id == 2
+
+def test_find_field_by_id():
+    field = find_field_by_id(2)
+    assert isinstance(field, Field)
+    assert field.id == 2
+   

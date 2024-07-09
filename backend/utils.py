@@ -17,6 +17,14 @@ def find_companies_list(): #async
     from mock_DB import companies
     return companies
 
+def find_skills_list(): 
+    from mock_DB import skills
+    return skills
+
+def find_fields_list(): 
+    from mock_DB import fields
+    return fields
+
 ##get document
 def find_job_by_id(job_id: int): #async
     job_id = int(job_id)
@@ -41,6 +49,14 @@ def find_company_by_id(company_id: int): #async
         if c.id == company_id:
             return c
     raise HTTPException(status_code=404, detail=f"company id {company_id} not found")
+
+def find_field_by_id(field_id: int): #async
+    field_id = int(field_id)
+    fields = find_fields_list()
+    for f in fields:
+        if f.id == field_id:
+            return f
+    raise HTTPException(status_code=404, detail=f"company id {field_id} not found")
 
 ############
 

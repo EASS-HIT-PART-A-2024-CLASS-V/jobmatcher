@@ -88,3 +88,15 @@ async def get_jobs():
     jobs = find_jobs_list() #async
     response = {'jobs': jobs}
     return response
+
+@app.get('/v1/field/{field_id}')
+async def get_field(field_id):
+    field = find_field_by_id(field_id)
+    response = {'field': field}
+    return response
+
+@app.get('/v1/skills/')
+async def get_field():
+    skills = find_skills_list()
+    response = {'skills': skills}
+    return response
