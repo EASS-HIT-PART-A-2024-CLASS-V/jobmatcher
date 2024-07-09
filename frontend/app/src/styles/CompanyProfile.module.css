@@ -1,0 +1,70 @@
+.companyProfile {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.companyProfile h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.companyProfile h2 {
+    color: #555;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.companyProfile p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.dropdownHeader {
+    cursor: pointer;
+    color: #007BFF;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.dropdownHeader:hover {
+    color: #0056b3;
+}
+
+.jobListWrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.jobListWrapper.open {
+    max-height: 500px; /* Adjust based on the expected content height */
+}
+
+.jobList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.jobItem {
+    margin: 10px 0;
+}
+
+.jobLink {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.jobLink:hover {
+    color: #0056b3;
+}

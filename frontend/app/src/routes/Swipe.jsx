@@ -5,6 +5,8 @@ import { useLoaderData } from 'react-router-dom';
 import CandidateCard from '../components/CandidateCard';
 import { swipe } from '../apiCalles';
 import Matched from '../components/Matched';
+import "../index.css"
+
 
 export default function Swipe () {
     const {matchEntities, isCandidate, user_id} = useLoaderData()

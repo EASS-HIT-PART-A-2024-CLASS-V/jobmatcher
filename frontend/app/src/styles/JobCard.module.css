@@ -1,0 +1,18 @@
+.jobCard {
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    background-image: url('/path/to/your/image.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire card */
+    background-position: center; /* Center the background image */
+    transition: transform 0.3s ease-in-out;
+    text-align: left; /* Align text to the left */
+}
+
+.jobCard:hover {
+    /* transform: scale(1.05); */
+}
