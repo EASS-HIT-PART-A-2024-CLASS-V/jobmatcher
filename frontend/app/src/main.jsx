@@ -11,6 +11,7 @@ import Home from "./routes/Home";
 import Swipe from "./routes/Swipe";
 import { getMatches, getCompany, getJobs } from "./apiCalles";
 import CompanyProfile from "./routes/CompanyProfile";
+import Chat from "./routes/Chat";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
           const matchEntities = await getMatches(user_id, isCandidate)
           return {matchEntities, isCandidate, user_id}
         } 
+      },
+      {
+        path: "chat",
+        element: <Chat/>
       }
   
     ]

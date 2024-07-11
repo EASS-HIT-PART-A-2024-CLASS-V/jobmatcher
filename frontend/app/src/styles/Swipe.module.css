@@ -1,0 +1,28 @@
+/* Swipe.module.css */
+.swipe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.swipe-button {
+    background-color: #00ff00;
+    color: #00ff00;
+    flex: 1; /* Allow the button container to grow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the container */
+    max-width: 100px; /* Set the maximum width for the buttons */
+}
+
+.like-button {
+    background-color: #00ff00; /* Example color for like button */
+}
+
+.dislike-button {
+    background-color: #ff0000; /* Example color for dislike button */
+}

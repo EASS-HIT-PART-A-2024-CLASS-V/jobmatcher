@@ -117,21 +117,50 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  margin-top: 150px;
+}
+
+.swipe-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  height: 100vh;
 }
 
 .swipe-button {
-  height: 100vh;
+  height: auto;
+  width: 30vw; 
+  margin: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #007580;
-  color: white;
+
+  color: rgb(255, 255, 255);
   border: none;
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: pointer;  
 }
+
+.like-button {
+  /* right: 0 */
+  transition: background-color 0.5s ease-in-out;
+}
+
+.dislike-button {
+  /* left: 0;  */
+  transition: background-color 0.5s ease;
+}
+
+.like-button:hover {
+  /* background: linear-gradient(to right, rgba(193, 18, 18, 0), rgba(25, 58, 192, 0.5)); */
+}
+
+.dislike-button:hover {
+  /* background: linear-gradient(to left, rgba(193, 18, 18, 0), rgba(192, 25, 25, 0.5)); */
+}
+
 /* Navbar */
 .navbar-link {
   margin: 10px; /* Adjust the margin as needed */

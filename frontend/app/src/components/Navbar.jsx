@@ -1,12 +1,30 @@
 import { NavLink } from "react-router-dom";
-import "../index.css"
+import styles from "../styles/Navbar.module.css"; // Import your module.css file
+import logo from '../assets/jobs_logo.svg';
+
 
 export default function Navbar() {
     return (
-        <nav className={"navbar"}>
-            <NavLink to="/" className={"navbar-link"}>Home</NavLink>
-            <NavLink to="/login" className={"navbar-link"}>Login</NavLink>
-            <NavLink to="/contact" className={"navbar-link"}>Contact</NavLink>
+        <nav className={styles.navbar}>
+            <NavLink to="/" className={styles.navbarLink}>Home</NavLink>
+            <NavLink to="/login" className={styles.navbarLink}>Login</NavLink>
+            <img src={logo} alt="Jobs Logo" className={styles.navbarLogo} />
+
         </nav>
     );
 }
+
+
+
+// import { NavLink } from "react-router-dom";
+// import "../index.css"
+
+// export default function Navbar() {
+//     return (
+//         <nav className={"navbar"}>
+//             <NavLink to="/" className={"navbar-link"}  >Home</NavLink>
+//             <NavLink to="/login" className={"navbar-link"}>Login</NavLink>
+//             <img src={logo} alt="Jobs Logo" />
+//         </nav>
+//     );
+// }

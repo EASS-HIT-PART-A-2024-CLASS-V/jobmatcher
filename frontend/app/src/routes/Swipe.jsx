@@ -7,7 +7,6 @@ import { swipe } from '../apiCalles';
 import Matched from '../components/Matched';
 import "../index.css"
 
-
 export default function Swipe () {
     const {matchEntities, isCandidate, user_id} = useLoaderData()
     const [isMatch, setIsMatch] = useState(false)
@@ -35,9 +34,11 @@ export default function Swipe () {
             <> 
                 {matchEntities.length > currentIndex ? (
                 <>
-                    <Button caption={"like"} onClick={handleLike} className={"swipe-button like-button stick-right"}></Button>
                     {isCandidate ? <JobCard matchEntity={matchEntities[currentIndex]}/> : <CandidateCard matchEntity={matchEntities[currentIndex]}/>}
-                    <Button caption={"dislike"} onClick={handleDislike} className={"swipe-button dislike-button"}></Button>
+                    <div className={"swipe-buttons-container"}>
+                        <Button caption={"dislike"} onClick={handleDislike} className={"swipe-button dislike-button"}></Button>
+                        <Button caption={"like"} onClick={handleLike} className={"swipe-button like-button"} ></Button>
+                    </div>
                 </>
                 ) : (
                     <h1>No more matches</h1>
