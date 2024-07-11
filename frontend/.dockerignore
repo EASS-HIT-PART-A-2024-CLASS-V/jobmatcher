@@ -1,0 +1,6 @@
+__pycache__/
+jobmatchervenv/
+.git
+.gitignore 
+*node_modules/
+README.md
