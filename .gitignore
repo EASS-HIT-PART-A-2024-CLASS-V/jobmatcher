@@ -1,6 +1,7 @@
 __pycache__/
 jobmatcherenv/
 .pytest_cache/
+DB/
 
 # Logs
 logs

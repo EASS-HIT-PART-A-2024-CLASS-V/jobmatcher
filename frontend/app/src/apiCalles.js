@@ -3,7 +3,7 @@ import axios, { all } from "axios";
 export const getMatches = async (user_id, isCandidate) => {
     //const matchEntities = isCandidate ? candidates : jobs;
     try {
-        const url_base = "http://127.0.0.1:8000"
+        const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/${isCandidate ? "jobs" : "candidates"}_match/${user_id}`
         //console.log("#######SUCCESS########")
         const response = await axios.get(url)
@@ -19,7 +19,7 @@ export const getMatches = async (user_id, isCandidate) => {
 
 export const swipe = async (swiperId, matchEntityId, isCandidate, like) => {
     try {
-        const url_base = "http://127.0.0.1:8000"
+        const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/swiping_${isCandidate ? "jobs" : "candidates"}/${swiperId}?${isCandidate ? "job_id" : "cand_id"}=${matchEntityId}&like=${like}`
         const response = await axios.post(url)
         //console.log(response.data.match)
@@ -33,7 +33,7 @@ export const swipe = async (swiperId, matchEntityId, isCandidate, like) => {
 
 export const getCompany = async (companyId) => {
     try {
-        const url_base = "http://127.0.0.1:8000"
+        const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/company/${companyId}`
         const response = await axios.get(url)
         //console.log("#########")
@@ -48,7 +48,7 @@ export const getCompany = async (companyId) => {
 
 export const getJobs = async (jobIds) => {
     try {
-        const url_base = "http://127.0.0.1:8000"
+        const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/jobs/`
         const response = await axios.get(url)
         const allJobs = response.data.jobs
@@ -63,7 +63,7 @@ export const getJobs = async (jobIds) => {
 }
 
 export const getField = async (fieldId) => {
-    const url_base = "http://127.0.0.1:8000"
+    const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
     const url = `${url_base}/v1/field/${fieldId}`
     try {
         const response = await axios(url)
@@ -79,7 +79,7 @@ export const getField = async (fieldId) => {
 }
 
 export const getSkills = async (skillIds) => {
-    const url_base = "http://127.0.0.1:8000"
+    const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
     const url = `${url_base}/v1/skills/`
     try {
         const response = await axios.get(url)
