@@ -44,6 +44,7 @@ const router = createBrowserRouter([
           const url = new URL(request.url)
           const isCandidate = (url.searchParams.get("isCandidate")) === "true"
           const matchEntities = await getMatches(user_id, isCandidate)
+          console.log("########### SWIPE LOADER IS CALLED ################")
           return {matchEntities, isCandidate, user_id}
         } 
       },
