@@ -3,10 +3,16 @@ import axios, { all } from "axios";
 export const getMatches = async (user_id, isCandidate) => {
     //const matchEntities = isCandidate ? candidates : jobs;
     try {
+        console.log("########## ENV ############")
+        console.log(import.meta.env)
         const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/${isCandidate ? "jobs" : "candidates"}_match/${user_id}`
+        console.log("######### URL #############")
+        console.log(url)
         //console.log("#######SUCCESS########")
         const response = await axios.get(url)
+        console.log("######### RESPONSE #############");
+        console.log(response);
         const matchEntities = response.data.candidates || response.data.jobs
         
         //console.log(response)

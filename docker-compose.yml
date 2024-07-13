@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    networks:
+      - mynetwork
+    ports:
+      - "5173:5173"
+    environment:
+      - URL_BASE=http://localhost:8000
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    networks:
+      - mynetwork
+    ports:
+      - "8000:8000"
+
+networks:
+  mynetwork:
+    driver: bridge
