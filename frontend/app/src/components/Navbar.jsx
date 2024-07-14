@@ -14,17 +14,3 @@ export default function Navbar() {
     );
 }
 
-
-
-// import { NavLink } from "react-router-dom";
-// import "../index.css"
-
-// export default function Navbar() {
-//     return (
-//         <nav className={"navbar"}>
-//             <NavLink to="/" className={"navbar-link"}  >Home</NavLink>
-//             <NavLink to="/login" className={"navbar-link"}>Login</NavLink>
-//             <img src={logo} alt="Jobs Logo" />
-//         </nav>
-//     );
-// }

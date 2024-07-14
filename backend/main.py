@@ -21,11 +21,10 @@ def matching_candidates(job: Job) -> List[Candidate]:
     candidates = find_candidates_list() #async
     return candidates
 
+#API
 @app.get('/')
 async def home():
     return {'message': 'home'}
-
-#maybe outsource to a service with some matching algorithm that gives high matching rate
 @app.get('/v1/jobs_match/{cand_id}')
 async def jobs_match(cand_id:int):
     candidate = find_candidate_by_id(cand_id) #async

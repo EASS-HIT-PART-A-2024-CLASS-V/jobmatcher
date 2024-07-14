@@ -1,39 +1,8 @@
 # Job Seeker and Company Matching App
-This project is a job matching application built using FastAPI. It includes endpoints for matching jobs to candidates and vice versa, as well as swiping functionality for candidates and jobs.
 
-## Entities Description
-There are two "match entities", "job" and "candidate" that should have a "match" when one liked the other and vice versa, according to the "likes" list. For your convenience, short description of each:
-### Candidate
-The `Candidate` entity represents an individual seeking a job. Each candidate has the following attributes:
+This project is a job matching application built using FastAPI and ReactJS. It includes endpoints for matching jobs to candidates and vice versa, as well as swiping functionality for candidates and jobs.
 
-- **id (int)**: Unique identifier for the candidate.
-- **first_name (str)**: First name of the candidate.
-- **last_name (str)**: Last name of the candidate.
-- **field_id (int)**: Identifier of the field or industry the candidate is interested in.
-- **technical_skills (List[int])**: List of skill identifiers that the candidate possesses.
-- **experience_years (conint(ge=0, le=50))**: Number of years of experience the candidate has in their field.
-- **likes (List[int])**: List of job identifiers that the candidate likes.
-- **dislikes (List[int])**: List of job identifiers that the candidate dislikes.
-
-### Job
-The `Job` entity represents a job position offered by a company. Each job has the following attributes:
-
-- **id (int)**: Unique identifier for the job.
-- **title (str)**: Title of the job position.
-- **description (str)**: Description of the job responsibilities and requirements.
-- **company_id (int)**: Identifier of the company offering the job.
-- **location (str)**: Location where the job is based.
-- **salary (int)**: Salary offered for the job.
-- **job_type (JobType)**: Type of job (e.g., Full-Time, Part-Time, Temporary, Internship).
-- **remote (Remote)**: Indicates whether the job is On-Site, Remote, or Hybrid.
-- **field_id (int)**: Identifier of the field or industry the job belongs to.
-- **technical_skills (List[int])**: List of skill identifiers required for the job.
-- **experience_years (conint(ge=0, le=50))**: Number of years of experience required for the job.
-- **likes (List[int])**: List of candidate identifiers that like this job.
-- **dislikes (List[int])**: List of candidate identifiers that dislike this job.
-
-
-## Instructions to Run Backend Service
+## Building Instructions
 
 1. Clone the Repository. 
    Choose one of the following, according to you preference:
@@ -54,26 +23,50 @@ The `Job` entity represents a job position offered by a company. Each job has th
     
     ```
 
-2. Build Backend Service
+2. Build and Run Via docker-compose
 
     ```bash
     cd jobmatcher/backend
-    docker build . -t jobmatcher-backend
+    docker-compose up
     ```
-3. Run The Container
-
-    ```bash
-    docker run -p 8000:8000 jobmatcher-backend
-    ```
-    if port 8000 is occupied, You can try an available one, e.g:
-    ```bash
-    docker run -p 8001:8000 jobmatcher-backend
-    ```
-4. Access the Application
-
-    The application should now be available at [http://localhost:8000](http://localhost:8000)
-
     
+3. Access the Application
+
+    The application should now be available at [http://localhost:5173/](http://localhost:5173/)
+
+## Getting Started
+
+After following the [building instructions](#building-instructions) to run the containers, you can start using the app. You'll be directed to the home page where you can click "Let's Go" or "Login".
+
+
+![Home Page](images/homepage.jpg)
+
+Choose your profile. For demonstration and simplification, the user details are fixed and hard-coded.
+
+![Choose Profile](images/loginpage.jpg)
+
+### Company Profile
+
+Click the dropdown arrow and choose the role for which you want to find a matching candidate.
+
+![Company Profile Dropdown Close](images/companydropclose.jpg)
+After clicking
+![Company Profile Dropdown Open](images/companydropopen.jpg)
+
+Start "swiping" through candidates according to their details by clicking like or dislike. (There are only 10 candidates in this demo.)
+
+![Swiping Candidates](images/candidatecard.jpg)
+
+Click "Login" and then choose the "Candidate" button. Make sure you click "Like" on the first job!
+
+![Candidate Profile](images/jobcard.jpg)
+
+Great success! You've found a job that likes your profile. You can choose whether to chat or continue looking for the perfect job.
+
+![Job Matched](images/match.jpg)
+
+## Entities Description
+There are two "match entities", "job" and "candidate" that should have a "match" when one liked the other and vice versa, according to the "likes" list.
 
 ## API Endpoints
 
@@ -108,3 +101,24 @@ You can also try "swagger" at [http://localhost:8000/docs](http://localhost:8000
     - `like` (bool): Whether the job likes the candidate.
 
 
+### Company Information
+
+- **GET /v1/company/{company_id}**: Retrieves information about a company by its ID.
+
+### Jobs List
+
+- **GET /v1/jobs/**: Retrieves a list of all jobs.
+
+### Field Information
+
+- **GET /v1/field/{field_id}**: Retrieves information about a field by its ID.
+
+### Skills List
+
+- **GET /v1/skills/**: Retrieves a list of all skills.
+
+## Technologies
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white)

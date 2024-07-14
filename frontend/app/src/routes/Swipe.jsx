@@ -16,15 +16,11 @@ export default function Swipe () {
         setCurrentIndex((prevIndex) => ((prevIndex < matchEntities.length) ? prevIndex + 1 : prevIndex));
     };
     const handleLike = async () => {
-        //console.log('Liked:', matchEntities[currentIndex].id);
         setIsMatch(await swipe(user_id, matchEntities[currentIndex].id, isCandidate, true))
-        //swipe(user_id, matchEntities[currentIndex].id, isCandidate, true)
         nextEntity();
     }
     const handleDislike = async () => {
-        //console.log('Disliked:', matchEntities[currentIndex].id);
         setIsMatch(await swipe(user_id, matchEntities[currentIndex].id, isCandidate, false))
-        //swipe(user_id, matchEntities[currentIndex].id, isCandidate, false)
         nextEntity();
     };
     
