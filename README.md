@@ -26,7 +26,7 @@ This project is a job matching application built using FastAPI and ReactJS. It i
 2. Build and Run Via docker-compose
 
     ```bash
-    cd jobmatcher/backend
+    cd jobmatcher
     docker-compose up
     ```
     
@@ -41,7 +41,7 @@ After following the [building instructions](#building-instructions) to run the c
 
 ![Home Page](images/homepage.jpg)
 
-Choose your profile. For demonstration and simplification, the user details are fixed and hard-coded.
+Click the Company button to "login" to your profile. For demonstration and simplification, the user details are fixed and hard-coded.
 
 ![Choose Profile](images/loginpage.jpg)
 
@@ -57,7 +57,7 @@ Start "swiping" through candidates according to their details by clicking like o
 
 ![Swiping Candidates](images/candidatecard.jpg)
 
-Click "Login" and then choose the "Candidate" button. Make sure you click "Like" on the first job!
+Click "Login" and then click the "Candidate" button to "login" as a job seeker. Make sure you click "Like" on the first job!
 
 ![Candidate Profile](images/jobcard.jpg)
 

@@ -3,19 +3,11 @@ import axios, { all } from "axios";
 export const getMatches = async (user_id, isCandidate) => {
     //const matchEntities = isCandidate ? candidates : jobs;
     try {
-        console.log("########## ENV ############")
-        console.log(import.meta.env)
         const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/${isCandidate ? "jobs" : "candidates"}_match/${user_id}`
-        console.log("######### URL #############")
-        console.log(url)
-        //console.log("#######SUCCESS########")
         const response = await axios.get(url)
-        console.log("######### RESPONSE #############");
-        console.log(response);
         const matchEntities = response.data.candidates || response.data.jobs
         
-        //console.log(response)
         return matchEntities
     } catch (e) {
         console.log("#######ERROR########\ngetMatches")
@@ -28,7 +20,6 @@ export const swipe = async (swiperId, matchEntityId, isCandidate, like) => {
         const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/swiping_${isCandidate ? "jobs" : "candidates"}/${swiperId}?${isCandidate ? "job_id" : "cand_id"}=${matchEntityId}&like=${like}`
         const response = await axios.post(url)
-        //console.log(response.data.match)
         return response.data.match
     } catch (e) {
         console.log("#######ERROR########\nswipe")
@@ -42,8 +33,6 @@ export const getCompany = async (companyId) => {
         const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/company/${companyId}`
         const response = await axios.get(url)
-        //console.log("#########")
-        //console.log(response)
         return response.data.company
     }
     catch (e) {
@@ -74,8 +63,6 @@ export const getField = async (fieldId) => {
     try {
         const response = await axios(url)
         const field = response.data.field
-        //console.log("the field is: ")
-        //console.log(field)
         return field 
     } catch (e)
     {
@@ -91,7 +78,6 @@ export const getSkills = async (skillIds) => {
         const response = await axios.get(url)
         const allSkills = response.data.skills
         const skills = allSkills.filter(skill => skillIds.includes(skill.id))
-        //console.log(skills)
         return skills
     } catch (e) {
         console.log("#######ERROR########\ngetSkills")
