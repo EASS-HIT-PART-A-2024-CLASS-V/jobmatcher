@@ -51,7 +51,6 @@ class Candidate(MatchEntity):
     first_name: str
     last_name: str
 
-###This is only foundation for further classes development###
 class User(BaseModel):
     id: int
     email: EmailStr
@@ -59,4 +58,3 @@ class User(BaseModel):
 class Company(User):
     name: str
     job_ids: List[int]
-#######################################################

@@ -1,7 +1,6 @@
 import axios, { all } from "axios";
 
 export const getMatches = async (user_id, isCandidate) => {
-    //const matchEntities = isCandidate ? candidates : jobs;
     try {
         const url_base = import.meta.env.VITE_URL_BASE || "http://127.0.0.1:8000"
         const url = `${url_base}/v1/${isCandidate ? "jobs" : "candidates"}_match/${user_id}`
@@ -25,7 +24,6 @@ export const swipe = async (swiperId, matchEntityId, isCandidate, like) => {
         console.log("#######ERROR########\nswipe")
         console.log(e)
     }
-    //apiCall to the backend
 }
 
 export const getCompany = async (companyId) => {
