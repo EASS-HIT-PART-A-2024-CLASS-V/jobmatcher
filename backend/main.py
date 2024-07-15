@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import Candidate, Job, MatchEntity
 from utils import *
+from match_make_server_calls import *
 from typing import List
 app = FastAPI()
 
@@ -14,12 +15,12 @@ app.add_middleware(
 )
 
 #### functions that should utilize matching algorithm
-def matching_jobs(candidate: Candidate) -> List[Job]:
-    jobs = find_jobs_list() #async
-    return jobs
-def matching_candidates(job: Job) -> List[Candidate]:
-    candidates = find_candidates_list() #async
-    return candidates
+# def matching_jobs(candidate: Candidate) -> List[Job]:
+#     jobs = find_jobs_list() #async
+#     return jobs
+# def matching_candidates(job: Job) -> List[Candidate]:
+#     candidates = find_candidates_list() #async
+#     return candidates
 
 #API
 @app.get('/')
