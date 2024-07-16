@@ -27,6 +27,8 @@ This project is a job matching application built using FastAPI and ReactJS. It i
 
     ```bash
     cd jobmatcher
+    ```
+    ```bash
     docker-compose up
     ```
     
@@ -68,7 +70,7 @@ Great success! You've found a job that likes your profile. You can choose whethe
 ## Entities Description
 There are two "match entities", "job" and "candidate" that should have a "match" when one liked the other and vice versa, according to the "likes" list.
 
-## API Endpoints
+## Backend Endpoints
 
 You can also try "swagger" at [http://localhost:8000/docs](http://localhost:8000/docs) and test manually the following endpoints:
 
@@ -116,6 +118,25 @@ You can also try "swagger" at [http://localhost:8000/docs](http://localhost:8000
 ### Skills List
 
 - **GET /v1/skills/**: Retrieves a list of all skills.
+
+## Match_making Endpoints
+
+You can also try "swagger" at [http://localhost:8001/docs](http://localhost:8001/docs) and test manually the following endpoints:
+
+### Job Matching
+
+- **POST /v1/matching_jobs**: Matches jobs for a candidate.
+  - **Request Body**:
+    - `candidate` (Candidate): The candidate's information.
+    - `jobs` (List[Job]): A list of jobs to match against.
+
+### Candidate Matching
+
+- **POST /v1/matching_candidates**: Matches candidates for a job.
+  - **Request Body**:
+    - `job` (Job): The job's information.
+    - `candidates` (List[Candidate]): A list of candidates to match against.
+
 
 ## Technologies
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
