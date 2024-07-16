@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import Candidate, Job, MatchEntity
+from match_making_algorithm import is_match_wrapper
 from typing import List
 
 app = FastAPI()
@@ -27,9 +28,9 @@ async def matching_jobs(request: Request):
     jobs = [Job(**job) for job in jobs_dicts]
 
     #matching algorithm
-    print(type(jobs[0]))
-    print((jobs[0]))
-    return {"best_jobs": jobs}
+    best_jobs = list(filter(is_match_wrapper(candidate), jobs))
+
+    return {"best_jobs": best_jobs}
 
 @app.post('/v1/matching_candidates')
 async def matching_candidates(request: Request):
@@ -45,7 +46,6 @@ async def matching_candidates(request: Request):
     candidates = [Candidate(**candidate) for candidate in candidates_dict]
 
     #matching algorithm
-    print(type(candidates[0]))
-    print((candidates[0]))
+    best_candidates = list(filter(is_match_wrapper(job), candidates))
     
-    return {"best_candidates": candidates}
+    return {"best_candidates": best_candidates}

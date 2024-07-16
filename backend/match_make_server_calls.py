@@ -23,7 +23,7 @@ def matching_jobs(candidate: Candidate) -> List[Job]:
     #converting the list of doctionaries to a list of pydantic classes
     best_jobs_dict = r.json()['best_jobs']
     best_jobs = [Job(**job) for job in best_jobs_dict]
-    print(type(best_jobs[0]))
+    
     return best_jobs
 
 def matching_candidates(job: Job) -> List[Candidate]:
@@ -42,7 +42,7 @@ def matching_candidates(job: Job) -> List[Candidate]:
     #converting the list of doctionaries to a list of pydantic classes
     best_candidates_dict = r.json()['best_candidates']
     best_candidates = [Candidate(**candidate) for candidate in best_candidates_dict]
-    print(type(best_candidates[0]))
+    
     return best_candidates
 
 if __name__ == "__main__":
