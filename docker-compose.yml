@@ -22,6 +22,19 @@ services:
       - mynetwork
     ports:
       - "8000:8000"
+    environment:
+      - URL_BASE=http://match_making:8001
+
+  match_making:
+    build:
+      context: ./match_making
+      dockerfile: Dockerfile
+    container_name: match_making
+    networks:
+      - mynetwork
+    ports:
+      - "8001:8001"
+    
 
 networks:
   mynetwork:
