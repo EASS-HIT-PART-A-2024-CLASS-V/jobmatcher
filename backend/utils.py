@@ -69,4 +69,10 @@ def match(cand_id:int, job_id:int):
     return is_matched
     
     
+def pydantic_to_dict(instance):
+    instance_dict = instance.model_dump()
 
+    for key in instance_dict:
+        if isinstance(instance_dict[key], Enum):
+            instance_dict[key] = instance_dict[key].value
+    return instance_dict

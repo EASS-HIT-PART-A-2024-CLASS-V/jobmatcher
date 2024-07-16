@@ -1,0 +1,59 @@
+from pydantic import BaseModel, EmailStr, conint
+from enum import Enum
+from typing import List, Optional, Dict
+
+
+class Field(BaseModel):
+    id: int
+    title: str
+
+    '''marketing = 'Marketing'
+    tourism = 'Tourism'
+    software = 'Software'''
+
+class JobType(Enum):
+    full_time = 'Full-Time'
+    part_time = 'Part-Time'
+    temporary = 'Temporary'
+    internship = 'Internship'
+
+class Remote(Enum):
+    on_site = 'On-Site'
+    remote = 'Remote'
+    hybrid = 'Hybrid'
+
+class Skill(BaseModel): 
+    id: int
+    title: str
+    field_id: int
+
+
+class MatchEntity(BaseModel):
+    id: int 
+    field_id: int
+    technical_skills: List[int]
+    experience_years: conint(ge=0, le=50)
+    job_type: JobType
+
+    likes : List[int]
+    dislikes : List[int]
+
+class Job(MatchEntity):
+    title: str
+    description: str
+    company_id: int
+    location: str
+    salary: int
+    remote: Remote
+
+class Candidate(MatchEntity):
+    first_name: str
+    last_name: str
+
+class User(BaseModel):
+    id: int
+    email: EmailStr
+
+class Company(User):
+    name: str
+    job_ids: List[int]
