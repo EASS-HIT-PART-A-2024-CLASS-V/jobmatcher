@@ -57,7 +57,9 @@ Click the Company button to "login" to your profile. For demonstration and simpl
 Click the dropdown arrow and choose the role for which you want to find a matching candidate.
 
 ![Company Profile Dropdown Close](images/companydropclose.jpg)
+
 After clicking
+
 ![Company Profile Dropdown Open](images/companydropopen.jpg)
 
 Start "swiping" through candidates according to their details by clicking like or dislike. (There are only 10 candidates in this demo.)
