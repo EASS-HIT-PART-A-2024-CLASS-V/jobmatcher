@@ -41,6 +41,7 @@ This project is a job matching application built using FastAPI and ReactJS. It i
 After following the [building instructions](#building-instructions) to run the containers, you can start using the app. You'll be directed to the home page where you can click "Let's Go" or "Login".
 
 ### Video Instructions
+[Link to youtube](https://youtu.be/vzXpSveeP7U)
 [![Watch the video](https://img.youtube.com/vi/vzXpSveeP7U/maxresdefault.jpg)](https://youtu.be/vzXpSveeP7U)
 
 ### Manual Instructions
