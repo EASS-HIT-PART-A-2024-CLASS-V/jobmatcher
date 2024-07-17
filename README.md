@@ -41,8 +41,8 @@ This project is a job matching application built using FastAPI and ReactJS. It i
 After following the [building instructions](#building-instructions) to run the containers, you can start using the app. 
 
 ### Video Instructions
-[Link to youtube](https://youtu.be/vzXpSveeP7U)
-[![Watch the video](https://img.youtube.com/vi/vzXpSveeP7U/maxresdefault.jpg)](https://youtu.be/vzXpSveeP7U)
+[Link to youtube](https://youtu.be/Nv8GoMkXw34) Sound on!
+[![Watch the video](https://img.youtube.com/vi/Nv8GoMkXw34/maxresdefault.jpg)](https://youtu.be/Nv8GoMkXw34)
 
 
 ## Entities Description
