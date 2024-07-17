@@ -46,33 +46,49 @@ After following the [building instructions](#building-instructions) to run the c
 
 ### Manual Instructions
 You'll be directed to the home page where you can click "Let's Go" or "Login".
-![Home Page](images/homepage.jpg)
+
+<p align="center">
+  <img src="images/homepage.jpg" width="400" alt="Home Page">
+</p>
 
 Click the Company button to "login" to your profile. For demonstration and simplification, the user details are fixed and hard-coded.
 
-![Choose Profile](images/loginpage.jpg)
+<p align="center">
+  <img src="images/loginpage.jpg" width="400" alt="Choose Profile">
+</p>
 
 ### Company Profile
 
 Click the dropdown arrow and choose the role for which you want to find a matching candidate.
 
-![Company Profile Dropdown Close](images/companydropclose.jpg)
+<p align="center">
+  <img src="images/companydropclose.jpg" width="400" alt="Company Profile Dropdown Close">
+</p>
 
-After clicking
 
-![Company Profile Dropdown Open](images/companydropopen.jpg)
+
+<p align="center">
+  <img src="images/companydropopen.jpg" width="400" alt="Company Profile Dropdown Open">
+</p>
 
 Start "swiping" through candidates according to their details by clicking like or dislike. (There are only 10 candidates in this demo.)
 
-![Swiping Candidates](images/candidatecard.jpg)
+<p align="center">
+  <img src="images/candidatecard.jpg" width="400" alt="Swiping Candidates">
+</p>
 
 Click "Login" and then click the "Candidate" button to "login" as a job seeker. Make sure you click "Like" on the first job!
 
-![Candidate Profile](images/jobcard.jpg)
+<p align="center">
+  <img src="images/jobcard.jpg" width="400" alt="Candidate Profile">
+</p>
 
 Great success! You've found a job that likes your profile. You can choose whether to chat or continue looking for the perfect job.
 
-![Job Matched](images/match.jpg)
+<p align="center">
+  <img src="images/match.jpg" width="400" alt="Job Matched">
+</p>
+
 
 ## Entities Description
 There are two "match entities", "job" and "candidate" that should have a "match" when one liked the other and vice versa, according to the "likes" list.
