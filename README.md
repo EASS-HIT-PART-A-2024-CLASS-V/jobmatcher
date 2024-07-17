@@ -74,6 +74,8 @@ Great success! You've found a job that likes your profile. You can choose whethe
 ## Entities Description
 There are two "match entities", "job" and "candidate" that should have a "match" when one liked the other and vice versa, according to the "likes" list.
 
+![Diagram](images/diagram.jpg)
+
 ## Backend Endpoints
 
 You can also try "swagger" at [http://localhost:8000/docs](http://localhost:8000/docs) and test manually the following endpoints:
