@@ -16,8 +16,9 @@ def matching_jobs(candidate: Candidate) -> List[Job]:
     jobs_data = [pydantic_to_dict(job) for job in jobs]
 
     #API call for the match-maker
+    
     r = httpx.post(f'{base_url}/v1/matching_jobs', json={'candidate': candidate_data, 'jobs': jobs_data})
-  
+    
     #converting the list of doctionaries to a list of pydantic classes
     best_jobs_dict = r.json()['best_jobs']
     best_jobs = [Job(**job) for job in best_jobs_dict]
